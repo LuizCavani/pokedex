@@ -12,6 +12,10 @@ const GLOBAL_STYLE = StyleSheet.create({
     white: {
         color: '#D3D3D3',
         backgroundColor: '#D3D3D3'
+    },
+    baseView: {
+        flex: 1,
+        backgroundColor: '#B1A7A6',
     }
 });
 

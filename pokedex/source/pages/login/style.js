@@ -1,12 +1,9 @@
 import { StyleSheet } from "react-native";
 
 const STYLE = StyleSheet.create({
-    test: {
-        flex: 1,
-    },
     titulo: {
         alignSelf: 'center',
-        fontSize: 30,
+        fontSize: 40,
         fontWeight: "bold",
         flex: 1,
         textAlignVertical: "center"

@@ -27,7 +27,7 @@ class Login extends Component {
     render() {
         const { email, senha } = this.state;
         return (
-            <SafeAreaView style={[STYLE.test, GLOBAL_STYLE.grey]}>
+            <SafeAreaView style={GLOBAL_STYLE.baseView}>
                 <Text style={STYLE.titulo}>Pokédex</Text>
                 <View style={STYLE.viewConfig}>
                     <View style={STYLE.viewInputs}>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, FlatList, SafeAreaView, TouchableOpacity, Image, Alert } from 'react-native';
 import { Body, Button, Card, CardItem, Left, Right, Thumbnail, View } from 'native-base';
-import * as API from '../../components/API';
+import { getPokemons } from '../../components/API';
 import STYLE from './style'
 import GLOBAL_STYLE from "../../assets/style";
 
@@ -54,7 +54,7 @@ class Listagem extends Component {
 
         urlPesquisaAtual = ((validacao == 'next') ? this.state.proximaUrl : this.state.urlAnterior);
 
-        consultaPokemon = await API.getPokemons(urlPesquisaAtual);
+        consultaPokemon = await getPokemons(urlPesquisaAtual);
 
 
         if (validacao == 'next' && this.state.proximaUrl == null || validacao == 'previous' && this.state.urlAnterior == null) {
@@ -91,6 +91,7 @@ class Listagem extends Component {
 
 
     render() {
+        const { navigation } = this.props;
         return (
             <SafeAreaView style={GLOBAL_STYLE.baseView}>
                 <View style={STYLE.viewBotoes}>
@@ -121,7 +122,7 @@ class Listagem extends Component {
                     keyExtractor={item => item.id}
                     renderItem={({ item }) => {
                         return (
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => { navigation.navigate('Status', { pokemonId: item.id }) }}>
                                 <RenderItem item={item} />
                             </TouchableOpacity>
                         )

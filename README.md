@@ -1,18 +1,18 @@
 # Pokédex
 
-# Informações de Login
+> O projeto foi desenvolvido e testado apenas em ambiente android devido a falta de ambiente para os processos na plataforma IOS
 
-- E-mail: admin@email.com
-- Senha: admin
+### **_Acesse a documentação clicando [aqui!](Documentacao.md)_**
 
-## Bibliotecas Utilizadas
+# Instruções.
 
-- React Navigation
+1. Clonar o repositório (Da maneira que preferir)
+2. Acessar a pasta do projeto em react native e executar os comandos via CLI a seguir.
+   1. npm install
+   2. npx react-native start
+   3. npx react-native run-{plataforma}
+      - Substiruir {plataforma} por android ou ios
 
-## Frameworks Utilizados
+> Nos comando 2 e 3 se recomenda a utilização de abas diferentes do console.
 
-- Native Base
-
-# Notas.
-
-- Optado por utilizar uma imagem ao invés de um framework/biblioteca de icones, devido a simplicidade da demanda.
+Realizados estes passos o projeto deverá ser executado, para visualizar as informações de login acesse a [documentação!](Documentacao.md)
